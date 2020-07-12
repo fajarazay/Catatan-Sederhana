@@ -11,6 +11,13 @@
         android:layout_height="match_parent"
         android:id="@+id/rv_country"/>
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:id="@+id/button_add"/>
 
 </RelativeLayout>

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -38,4 +38,13 @@ dependencies {
     //untuk menampilkan list
     implementation "androidx.recyclerview:recyclerview:1.1.0"
 
+    //library untuk menggunakan room sebagai database
+    implementation "androidx.room:room-runtime:2.2.5"
+    kapt "androidx.room:room-compiler:2.2.5"
+
+    //untuk melihat struktur database
+    implementation "com.facebook.stetho:stetho:1.5.1"
+
+    //untuk menambahkan button (float action button) yang ada di halaman main activity kanan bagian bawah
+    implementation "com.google.android.material:material:1.1.0"
 }
