@@ -47,4 +47,7 @@ dependencies {
 
     //untuk menambahkan button (float action button) yang ada di halaman main activity kanan bagian bawah
     implementation "com.google.android.material:material:1.1.0"
+
+    //untuk tampilan item list catatan
+    implementation "androidx.cardview:cardview:1.0.0"
 }

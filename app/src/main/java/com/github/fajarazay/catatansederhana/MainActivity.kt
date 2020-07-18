@@ -50,7 +50,6 @@ class MainActivity : AppCompatActivity() {
 
      val catatanObserver: Observer<List<Catatan>> by lazy {
         Observer<List<Catatan>> { catatan ->
-            Log.d("catatan: ", catatan[0].judul)
             adapter?.setCatatan(catatan)
         }
     }

@@ -1,9 +1,11 @@
 package com.github.fajarazay.catatansederhana
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_list.view.*
 
@@ -40,6 +42,12 @@ class Adapter  :
         // judul & isi
         holder.tv_judul.text = listCatatan[position].judul
         holder.tv_isi.text = listCatatan[position].isi
+        holder.cv_item_catatan.setOnClickListener {
+            //pindah ke halaman detail
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra("idCatatan", listCatatan[position].idCatatan)
+            it.context.startActivity(intent)
+        }
     }
 }
 
@@ -47,5 +55,6 @@ class ViewHolder(view:View): RecyclerView.ViewHolder (view) {
     //inisialisasi view
     val tv_judul = view.tv_judul
     val tv_isi = view.tv_isi
+    val cv_item_catatan = view.cv_item_catatan
 
 }
